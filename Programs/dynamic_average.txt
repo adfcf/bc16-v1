@@ -1,0 +1,40 @@
+# NAME: dynamic_average
+# AUTHOR: adfcf
+# DESCRIPTION: 
+	# This program sequentially loads numbers from an array located at 0x0010; its size is unkwown a priori.
+	# All the read values are added to the accumulator register, and a null value is expected to indicate the end of the array.
+	# The integer average of the collected numbers is inserted in place of the null value.
+
+LEGEND
+- $r0: summation.
+- $r1: index.
+
+SYMBOLIC LANGUAGE
+00 add $r0 $zero $zero
+01 add $r1 $zero $zero
+02 lw $r1 16
+03 add $r0 $r0 $acc
+04 addi $r1 $r1 1
+05 cmp $conde $acc $zero
+06 and $conde $conde $eq
+07 bc 1
+08 j 2
+09 subi $r1 $r1 1
+10 div $acc $r0 $r1
+11 sw $r1 16
+12 halt
+
+MACHINE LANGUAGE
+00 0101100000000000 (0x5800)
+01 0101100100000000 (0x5900)
+02 0001100100010000 (0x1910)
+03 0101100010000001 (0x5881)
+04 0110100110010001 (0x6991)
+05 1100001000010000 (0xc210)
+06 1101001000100100 (0xd224)
+07 0011000000000001 (0x3001)
+08 0100000000000010 (0x4002)
+09 1010100110010001 (0xa991)
+10 1011000110001001 (0xb189)
+11 0010100100010000 (0x2910)
+12 0000000000000000 (0x0000)

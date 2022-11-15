@@ -1,0 +1,47 @@
+# NAME: hurried_calculator
+# AUTHOR: adfcf
+# DESCRIPTION: 
+	# This program loads two numbers from the main memory.
+	# The first number is expected to be at the position 0x0010, and the second one at 0x0011.
+	# The program will immediately compute all the basic arithmetic operations with those numbers.
+	# [0x0010] is treated as first operand, and [0x0011] is treated as the second one.
+	# Finally, the results (sum, difference, product, quotient and remainder) are recorded at [0x0012-0x0016] retrospectively.
+
+LEGEND
+- $r0: first operand.
+- $r1: second operand.
+
+SYMBOLIC LANGUAGE
+00 lw $zero 16
+01 add $r0 $acc $zero
+02 lw $zero 17
+03 add $r1 $acc $zero
+04 add $acc $r0 $r1
+05 sw $zero 18
+06 sub $acc $r0 $r1
+07 sw $zero 19
+08 mult $acc $r0 $r1
+09 sw $zero 20
+10 div $acc $r0 $r1
+11 sw $zero 21
+12 add $acc $mod $zero
+13 sw $zero 22
+14 halt
+
+MACHINE LANGUAGE
+00 0001000000010000 (0x1010)
+01 0101100000010000 (0x5810)
+02 0001000000010001 (0x1011)
+03 0101100100010000 (0x5910)
+04 0101000110001001 (0x5189)
+05 0010000000010010 (0x2012)
+06 1001000110001001 (0x9189)
+07 0010000000010011 (0x2013)
+08 0111000110001001 (0x7189)
+09 0010000000010100 (0x2014)
+10 1011000110001001 (0xb189)
+11 0010000000010101 (0x2015)
+12 0101000100110000 (0x5130)
+13 0010000000010110 (0x2016)
+14 0000000000000000 (0x0000)
+
