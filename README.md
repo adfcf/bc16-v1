@@ -1,9 +1,8 @@
 # BC16-V1
 ## What is it?
 It's an attempt to design a basic 16-bit CPU by using digital circuits simulated by the old [Logisim](http://www.cburch.com/logisim/) program.
-Its name, per se, is very telling - BC16-V1 - basic CPU, 16 bits, version 1. 
-The '1' actually indicates it has a monocycle organization, that is, this CPU executes only one instruction a clock tick,
-but it's guaranteed that, in a single clock tick, it'll be executed.
+Its name is very telling - BC16-V1 - basic CPU, 16 bits, version 1. 
+The '1' actually indicates it has a monocycle organization, that is, this CPU executes a single instruction a clock tick.
 A hypothetical version 2 would have to come into life equipped with pipelining.
 
 ![high_level_view](https://github.com/adfcf/bc16-v1/blob/main/high_level_view.png)
