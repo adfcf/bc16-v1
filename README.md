@@ -27,7 +27,7 @@ CPU presented here. Despite not being maintained anymore, Logisim is still a sat
 <img alt='logisim' src='https://github.com/adfcf/bc16-v1/blob/main/Images/logisim.png' width='420' height='250'/>
 
 ## Instruction Set Architecture (ISA)
-### Intruction Set
+### Instruction Set
 One of the most important elements of the architecture of a CPU is its instruction set, the catalog of the operations it can perform. The CPU designed for this project
 provides 16 distinct instructions and these are listed below:
 | Instruction  | Opcode    | Description | Operands | Symbolic function |
