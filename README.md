@@ -179,7 +179,7 @@ When halt instruction happens, this D-type flip-flop will be set, which will res
 permanent suspension state in the CPU.
 
 #### Instruction Classification
-![instruction_classification](https://github.com/adfcf/bc16-v1/blob/main/Images/instructino_classification.png)
+![instruction_classification](https://github.com/adfcf/bc16-v1/blob/main/Images/instruction_classification.png)
 
 This circuit generates instruction classification signals.
 
