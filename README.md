@@ -35,7 +35,7 @@ provides 16 distinct instructions and these are listed below:
 | halt | 0x0      | It stops the operation of the CPU. | ∅ | ∅ |
 | lw | 0x1      | It loads a word from the main memory. | $base, shift | [$acc] = mem[[$base] + shift] |
 | sw | 0x2      | It stores a word into the main memory. | $base, shift | mem[[$base] + shift] = [$acc] |
-| bc | 0x3      | It branches the exectuion flow on a certain condition. | shift | if [$conde] != 0, then [$pc] = [$pc] + shift |
+| bc | 0x3      | It branches the execution flow on a certain condition. | shift | if [$conde] != 0, then [$pc] = [$pc] + shift |
 | j | 0x4      | It disrupts the execution flow unconditionally. | jmp | [$pc] = jmp |
 | add | 0x5      | It adds two numbers and keeps the sum. | $d, $s0, $s1 | [$d] = [$s0] + [$s1] |
 | addi | 0x6      | It adds two numbers and keeps the sum. One of the summands is embedded in the instruction | $d, $s0, s1 | [$d] = [$s0] + s1 |
