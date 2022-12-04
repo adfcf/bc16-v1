@@ -15,7 +15,7 @@ complexity renders a more expensive product. In opposition, RISC principles are 
 manufacture. Because of that, RISC CPUs do not offer a wide variety of instructions for its low-level user. 
 
 ### RISC characteristics
-In a more technical sense, these are typical RISC characteristics, which have been conveniently adopted for this work:
+In a more technical sense, these are typical RISC characteristics which have been conveniently adopted for this work:
 - Reduced number of instructions.
 - Simple and primary instructions.
 - Monocycle (one clock cycle per instruction).
