@@ -74,7 +74,7 @@ of its registers have a capacity of 16 bits.
 |gt      |0x5|0x0002 (read-only)|
 |lt      |0x6|0x0004 (read-only)|
 |shift   |0x7|0x0fff (read-only)|
-|r0 to r1|0x8 to 0xf|Variable|
+|r0 to r7|0x8 to 0xf|Variable|
 
 #### User-hidden registers
 |Register|Value|
